@@ -8,7 +8,6 @@ public class shop : MonoBehaviour
     public turretBlueprint standartTurret;
     public turretBlueprint anotherTurret;
 
-
     private void Start()
     {
         buildManager = BuildManager.instance;
@@ -24,4 +23,5 @@ public class shop : MonoBehaviour
         Debug.Log("another turret selected");
         buildManager.SelectTurretToBuild(anotherTurret);
     }
+
 }
