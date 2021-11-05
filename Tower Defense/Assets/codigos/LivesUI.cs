@@ -7,13 +7,14 @@ public class LivesUI : MonoBehaviour
 
 {
     public Text livesText;
+    public PayerStats ps;
 
-   
+
 
     // Update is called once per frame
     void Update()
     {
-        livesText.text = PayerStats.Lives +"LIVES";
+        livesText.text = ps.ModifyLives() + "LIVES";
 
     }
 }

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 0;
     public int health = 80;
+    public PayerStats ps;
 
     private void Start()
     {
@@ -55,7 +56,7 @@ public class Enemy : MonoBehaviour
     void EndPath()
     {
         Destroy(gameObject);
-        PayerStats.Lives--;
+        ps.ModifyLives();
     }
 
 }
