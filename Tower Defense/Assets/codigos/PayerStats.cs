@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PayerStats : MonoBehaviour
+public class PayerStats : MonoBehaviour, IPlayerStats
 {
-    public static int Money;
-    public int startMoney = 400;
-    public static int Lives;
-    public int startLives = 20;
-
-    private void Start()
-    {
-        Money = startMoney;
-        Lives = startLives;
+    [SerializeField] int modifierM, modifierL;
+    public int ModifyMoney() {
+        return modifierM;
     }
-
-
+    public int ModifyLives() {
+        return modifierL;
+    }
 }
